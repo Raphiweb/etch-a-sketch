@@ -1,0 +1,17 @@
+.container {
+  margin-top: 40px;
+  margin-left: 40px;
+  display: grid;
+  border: 3px solid black;
+  border-radius: 3px;
+  height: 575px;
+  width: 575px;
+}
+
+.gridDiv {
+  border: 1px solid blue;
+}
+
+.gridDiv:hover {
+  background-color: orangered;
+}
