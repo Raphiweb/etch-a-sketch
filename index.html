@@ -6,22 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./images/logo.jpg" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <h1>Etch a Sketch</h1>
-    <div class="container"></div>
-    <div class="menu">
-      <div class="sliderContainer">
-        <p class="displayValue" value=""></p>
-        <input class="slider" type="range" min="1" max="64" value="16" />
-      </div>
-
-      <div class="buttons">
-        <button class="clear">Clear</button>
-        <button class="eraser">Eraser</button>
-        <button class="randomColors">Random Colors</button>
+    <header>
+      <h1>Etch a Sketch</h1>
+    </header>
+    <div class="innerBody">
+      <div class="container"></div>
+      <div class="menu">
+        <h2>Menu</h2>
+        <div class="sliderContainer">
+          <input class="slider" type="range" min="1" max="64" value="16" />
+          <p class="displayValue" value=""></p>
+        </div>
+        <div class="colorPickerDiv">
+          <input class="colorPicker" type="color" />
+          <p>Color picker</p>
+        </div>
+        <div class="buttons">
+          <button class="eraser">Eraser</button>
+          <button class="randomColors">Random Colors</button>
+          <button class="clear">Clear</button>
+        </div>
       </div>
     </div>
+    <footer>
+      <p>
+        Copyright &copy; 2022
+        <a href="https://github.com/Raphiweb"
+          >Raphiweb <img src="./images/githublogo.png" alt="GitHub logo"
+        /></a>
+      </p>
+    </footer>
   </body>
 </html>
