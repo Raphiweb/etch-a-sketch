@@ -1,33 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  font-family: "Mouse Memoirs", sans-serif;
+}
+
+.innerBody {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  height: 85vh;
+}
+
+header {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 44px;
+  text-shadow: 5px 5px lightgray;
 }
 
 .container {
-  margin-top: 40px;
-  margin-left: 40px;
   display: grid;
-  border: 3px solid black;
-  border-radius: 3px;
-  height: 575px;
-  width: 575px;
+  border: 4px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 5px lightgray;
+  height: 600px;
+  width: 600px;
 }
 
 .gridDiv {
-  border: 1px solid blue;
+  border: 0.1px solid lightgray;
   background-color: white;
 }
 
 .gridDiv:hover {
-  background-color: orangered;
+  cursor: crosshair;
 }
 
-.gridDiv:active {
-  background-color: green;
-}
-
-.sliderContainer,
-.buttons,
 .menu {
-  border: 2px solid red;
+  height: 50vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 4px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 5px lightgray;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline lightgray 2px;
+}
+
+.sliderContainer {
+  font-size: 16px;
+  text-align: center;
+}
+
+.slider {
+  width: 150px;
+  height: 8px;
+  margin-bottom: 15px;
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: ew-resize;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background: transparent;
+  box-shadow: 0 0 10px 2px lightgray;
+}
+
+.colorPicker {
+  border: none;
+  background-color: transparent;
+  height: 75px;
+  width: 75px;
+}
+
+.colorPicker::-webkit-color-swatch {
+  border-radius: 50%;
+}
+
+.colorPicker:hover {
+  cursor: pointer;
+}
+
+.colorPickerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 75px;
+  height: 25px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: transparent;
+  margin: 10px 0 10px 0;
+  transition: background-color 0.2s linear;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px 2px lightgray;
+}
+
+.randomColors {
+  width: 120px !important;
+}
+
+.eraserClicked {
+  background-color: lightgreen !important;
+  box-shadow: 0 0 0 2px lightgreen;
+}
+
+.randomColorsClicked {
+  background-color: lightgreen !important;
+  box-shadow: 0 0 0 2px lightgreen;
+}
+
+.clear:hover {
+  background-color: lightcoral;
+}
+
+.clear:active {
+  background-color: red;
+}
+
+footer {
+  text-align: center;
+  font-size: 16px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer img {
+  max-height: 20px;
+  margin-left: 5px;
 }
