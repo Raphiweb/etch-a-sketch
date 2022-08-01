@@ -1,6 +1,28 @@
 const container = document.querySelector(".container");
 const gridDivTarget = document.querySelector(".container").childNodes;
 let mouseDown = false;
+const colorPicker = document.querySelector(".colorPicker");
+const eraser = document.querySelector(".eraser");
+const randomBtn = document.querySelector(".randomColors");
+const slider = document.querySelector(".slider");
+const valueSlider = document.querySelector(".displayValue");
+const clearBtn = document.querySelector(".clear");
+
+clearBtn.addEventListener("click", clearColors);
+
+window.addEventListener("DOMContentLoaded", updateGridSize(slider.value));
+
+valueSlider.innerHTML = slider.value + " x " + slider.value;
+
+document.querySelector("body").addEventListener("mousedown", function () {
+  mouseDown = true;
+  mouseDownFunc();
+});
+
+document.querySelector("body").addEventListener("mouseup", function () {
+  mouseDown = false;
+  mouseDownFunc();
+});
 
 function createBoxes(rows, columns) {
   for (let i = 0; i < rows * columns; i++) {
@@ -11,14 +33,20 @@ function createBoxes(rows, columns) {
   mouseDownFunc();
 }
 
+eraser.addEventListener("click", eraserFunc);
+function eraserFunc() {
+  eraser.classList.toggle("eraserClicked");
+}
+
+randomBtn.addEventListener("click", randomColor);
+function randomColor() {
+  randomBtn.classList.toggle("randomColorsClicked");
+}
+
 function createGridSize(rows, columns) {
   container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 }
-
-const slider = document.querySelector(".slider");
-const valueSlider = document.querySelector(".displayValue");
-valueSlider.innerHTML = slider.value + " x " + slider.value;
 
 slider.oninput = function newValue() {
   valueSlider.innerHTML = this.value + " x " + this.value;
@@ -35,34 +63,9 @@ function clearGrid() {
   container.innerHTML = "";
 }
 
-window.addEventListener("DOMContentLoaded", updateGridSize(slider.value));
-
-function color(e) {
-  e.target.style.backgroundColor = "yellow";
-}
-
-// experimental
-
-const clearBtn = document.querySelector(".clear");
-clearBtn.addEventListener("click", clearColors);
-
 function clearColors() {
   updateGridSize(slider.value);
 }
-
-//
-
-document.querySelector("body").addEventListener("mousedown", function () {
-  mouseDown = true;
-  console.log(mouseDown);
-  mouseDownFunc();
-});
-
-document.querySelector("body").addEventListener("mouseup", function () {
-  mouseDown = false;
-  console.log(mouseDown);
-  mouseDownFunc();
-});
 
 function mouseDownFunc() {
   if (mouseDown === true) {
@@ -79,4 +82,17 @@ function mouseDownFunc() {
   }
 }
 
-//
+function randomColorMath() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return (rgb = `rgb(${r},${g},${b})`);
+}
+
+function color(e) {
+  if (eraser.classList.contains("eraserClicked") === true) {
+    e.target.style.backgroundColor = "#ffffff";
+  } else if (randomBtn.classList.contains("randomColorsClicked") === true) {
+    e.target.style.backgroundColor = randomColorMath();
+  } else e.target.style.backgroundColor = `${colorPicker.value}`;
+}
