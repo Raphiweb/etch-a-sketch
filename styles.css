@@ -1,19 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Mouse Memoirs", sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-family: "Mouse Memoirs", sans-serif;
 }
 
 .innerBody {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 85vh;
 }
@@ -51,7 +53,7 @@ h1 {
 
 .menu {
   height: 50vh;
-  width: 20vw;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -62,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   text-decoration: underline lightgray 2px;
 }
@@ -117,6 +119,7 @@ h2 {
 }
 
 .buttons button {
+  font-size: 18px;
   width: 75px;
   height: 25px;
   border: 1px solid grey;
