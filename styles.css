@@ -2,7 +2,6 @@
 
 * {
   margin: 0;
-  padding: 0;
   font-family: "Mouse Memoirs", sans-serif;
 }
 
@@ -44,7 +43,6 @@ h1 {
   box-shadow: 0 0 8px 5px lightgray;
   width: 550px;
   height: 550px;
-  /* margin: 0 30px 10px 30px; */
 }
 
 .container:hover {
@@ -81,7 +79,7 @@ h2 {
 
 .slider {
   width: 150px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -130,7 +128,6 @@ h2 {
   flex: 2 0 auto;
   font-size: 2.5vh;
   width: 60px;
-  height: 3.25vh;
   border: 1px solid grey;
   border-radius: 20px;
   background-color: transparent;
@@ -180,5 +177,4 @@ footer a {
 
 footer img {
   max-height: 2vh;
-  margin-left: 2px;
 }
