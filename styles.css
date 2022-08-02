@@ -13,9 +13,11 @@ body {
 }
 
 .innerBody {
+  height: 80vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin: 10px 0 10px 0;
 }
@@ -38,10 +40,9 @@ h1 {
   border: 4px solid lightgray;
   border-radius: 8px;
   box-shadow: 0 0 8px 5px lightgray;
-  min-width: 45vw;
-  min-height: 80vh;
-  max-width: 630px;
-  max-height: 630px;
+  width: 550px;
+  height: 550px;
+  margin: 0 15px 10px 55px;
 }
 
 .container:hover {
@@ -54,8 +55,8 @@ h1 {
 }
 
 .menu {
-  height: 50vh;
-  width: 15vw;
+  height: 400px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -94,8 +95,8 @@ h2 {
 .colorPicker {
   border: none;
   background-color: transparent;
-  height: 10vh;
-  width: 5vw;
+  height: 75px;
+  width: 75px;
 }
 
 .colorPicker::-webkit-color-swatch {
@@ -121,6 +122,10 @@ h2 {
 }
 
 .buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
   font-size: 2.5vh;
   width: 5vw;
   height: 3.25vh;
@@ -137,7 +142,7 @@ h2 {
 }
 
 .randomColors {
-  width: 8vw !important;
+  width: 10vw !important;
 }
 
 .eraserClicked {
