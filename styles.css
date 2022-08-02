@@ -42,13 +42,13 @@ h1 {
   width: 600px;
 }
 
+.container:hover {
+  cursor: crosshair;
+}
+
 .gridDiv {
   border: 0.1px solid lightgray;
   background-color: white;
-}
-
-.gridDiv:hover {
-  cursor: crosshair;
 }
 
 .menu {
