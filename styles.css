@@ -88,8 +88,9 @@ h2 {
 }
 
 .slider::-webkit-slider-runnable-track {
-  background: transparent;
+  background: white;
   box-shadow: 0 0 10px 2px lightgray;
+  border-radius: 10px;
 }
 
 .colorPicker {
