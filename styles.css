@@ -17,7 +17,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
-  height: 85vh;
+  margin: 10px 0 10px 0;
 }
 
 header {
@@ -29,7 +29,7 @@ header {
 
 h1 {
   text-align: center;
-  font-size: 44px;
+  font-size: 10vh;
   text-shadow: 5px 5px lightgray;
 }
 
@@ -38,8 +38,10 @@ h1 {
   border: 4px solid lightgray;
   border-radius: 8px;
   box-shadow: 0 0 8px 5px lightgray;
-  height: 600px;
-  width: 600px;
+  min-width: 45vw;
+  min-height: 80vh;
+  max-width: 630px;
+  max-height: 630px;
 }
 
 .container:hover {
@@ -64,19 +66,19 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 5vh;
   font-weight: bold;
   text-decoration: underline lightgray 2px;
 }
 
 .sliderContainer {
-  font-size: 16px;
+  font-size: 3vh;
   text-align: center;
 }
 
 .slider {
-  width: 150px;
-  height: 8px;
+  width: 10vw;
+  height: 2vh;
   margin-bottom: 15px;
 }
 
@@ -92,8 +94,8 @@ h2 {
 .colorPicker {
   border: none;
   background-color: transparent;
-  height: 75px;
-  width: 75px;
+  height: 10vh;
+  width: 5vw;
 }
 
 .colorPicker::-webkit-color-swatch {
@@ -119,9 +121,9 @@ h2 {
 }
 
 .buttons button {
-  font-size: 18px;
-  width: 75px;
-  height: 25px;
+  font-size: 2.5vh;
+  width: 5vw;
+  height: 3.25vh;
   border: 1px solid grey;
   border-radius: 20px;
   background-color: transparent;
@@ -135,7 +137,7 @@ h2 {
 }
 
 .randomColors {
-  width: 120px !important;
+  width: 8vw !important;
 }
 
 .eraserClicked {
@@ -157,8 +159,11 @@ h2 {
 }
 
 footer {
-  text-align: center;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-size: 2.5vh;
 }
 
 footer a {
@@ -167,6 +172,6 @@ footer a {
 }
 
 footer img {
-  max-height: 20px;
-  margin-left: 5px;
+  max-height: 2vh;
+  margin-left: 2px;
 }
