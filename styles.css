@@ -13,7 +13,7 @@ body {
 }
 
 .innerBody {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
